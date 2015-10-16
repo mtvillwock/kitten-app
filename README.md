@@ -1,8 +1,9 @@
-# kitten-app
+# Kitten App
 Create and destroy Kittens. Live coded for WDI at General Assembly.
 
 ## Use
 Run these commands in your Terminal.
+
 1. ```git clone <url>```
 2. ```cd <directory name>```
 3. ```npm install```
