@@ -22,16 +22,17 @@
     <header class="page-header">
       <h1>Kitten App</h1>
     </header>
-    <form  action="/kittens" method="post">
-      <input type="text" name="name">
-      <input type="text" name="url">
-      <input type="submit" value="Make a cat">
+    <form id="newKitten">
+      Name <input class="form-control" type="text" name="name">
+      <br>
+      Url <input class="form-control" type="text" name="url">
+      <input class="btn btn-primary" type="submit" value="Make a cat">
     </form>
-    <div class="kittens">
-      <% kittens.forEach(function(kitten)  { %>
-      <p><%= kitten.name %></p>
-      <% }); %>
-    </div>
+      <ul class="kittens list-group">
+        <% kittens.forEach(function(kitten)  { %>
+        <li class="kitten list-group-item"><%= kitten.name %> at <%= kitten.url %> <span data-id="<%= kitten._id %>" class="close delete">X</span></li>
+        <% }); %>
+      </ul>
   </div>
 
 </body>

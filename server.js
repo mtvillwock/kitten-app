@@ -41,6 +41,16 @@ app.post('/kittens', function(req, res) {
     })
 })
 
+app.delete('/kittens/:_id', function(req, res) {
+  console.log('kitten id is: ', req.params);
+  db.Kitten.find({_id: req.params._id}, function(err, kitten) {
+    kitten.remove(function(err, kitten) {
+      console.log("kitten deleted");
+      res.json("That cat is dead");
+    })
+  })
+})
+
 app.listen(3000, function() {
     console.log("listening on port 3000");
 });
