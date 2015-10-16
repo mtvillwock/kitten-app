@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-    <!-- App Name -->
+    Kittens App
   </title>
   <meta charset="utf-8" />
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -20,8 +20,18 @@
 <body>
   <div id="page-wrapper" class="container">
     <header class="page-header">
-      <h1></h1>
+      <h1>Kitten App</h1>
     </header>
+    <form  action="/kittens" method="post">
+      <input type="text" name="name">
+      <input type="text" name="url">
+      <input type="submit" value="Make a cat">
+    </form>
+    <div class="kittens">
+      <% kittens.forEach(function(kitten)  { %>
+      <p><%= kitten.name %></p>
+      <% }); %>
+    </div>
   </div>
 
 </body>
